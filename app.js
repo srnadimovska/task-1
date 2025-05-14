@@ -3,7 +3,7 @@ const app = express();
 const database = require('./pkg/db/index');
 
 const akademijaController = require('./controller/akademijaController');
-
+const kursController = require('./controller/kursController');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -18,6 +18,11 @@ app.post('/api/v1/akademija',akademijaController.createAkademija);
 app.patch('/api/v1/akademija/:id', akademijaController.updateAkademija);
 app.delete('/api/v1/akademija/:id', akademijaController.deleteAkademija);
 
+app.get('/api/v1/kurs', kursController.getAllKurs);
+app.get('/api/v1/kurs/:id', kursController.getKurs);
+app.post('/api/v1/kurs', kursController.createKurs);
+app.patch('/api/v1/kurs/:id', kursController.updateKurs);
+app.delete('/api/v1/kurs/:id',kursController.deleteKurs);
 
 
 app.listen(process.env.PORT, (err) => {
