@@ -26,6 +26,7 @@ app.patch('/api/v1/kurs/:id', kursController.updateKurs);
 app.delete('/api/v1/kurs/:id',kursController.deleteKurs);
 
 app.get('/allkursevi', viewController.viewKursevi);
+app.get('/test', viewController.viewTest);
 
 
 app.listen(process.env.PORT, (err) => {
