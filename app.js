@@ -4,6 +4,7 @@ const database = require('./pkg/db/index');
 
 const akademijaController = require('./controller/akademijaController');
 const kursController = require('./controller/kursController');
+const viewController = require('./controller/viewController')
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -23,6 +24,8 @@ app.get('/api/v1/kurs/:id', kursController.getKurs);
 app.post('/api/v1/kurs', kursController.createKurs);
 app.patch('/api/v1/kurs/:id', kursController.updateKurs);
 app.delete('/api/v1/kurs/:id',kursController.deleteKurs);
+
+app.get('/allkursevi', viewController.viewKursevi);
 
 
 app.listen(process.env.PORT, (err) => {
