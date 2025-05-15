@@ -23,3 +23,14 @@ exports.viewTest = async (req,res) => {
         res.status(500).send(err.message);
     }
 };
+
+exports.getLoginForm = async (req, res) => {
+  try {
+    res.status(200).render('login', {
+      title: 'Login',
+      podnaslov: 'Login to see our movies',
+    });
+  } catch (err) {
+    res.status(500).send('Error');
+  }
+};
