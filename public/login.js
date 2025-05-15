@@ -8,7 +8,7 @@ const login = async (email, password) => {
         password,
       },
     });
-    window.location.href = '/viewmovies';
+    window.location.href = '/kurs';
   } catch (err) {
     console.log(err.message);
   }
