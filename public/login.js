@@ -8,7 +8,7 @@ const login = async (email, password) => {
         password,
       },
     });
-    window.location.href = '/kurs';
+    window.location.href = '/allkursevi';
   } catch (err) {
     console.log(err.message);
   }
