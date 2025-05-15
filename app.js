@@ -36,7 +36,7 @@ app.use(
       },
     })
     .unless({
-      path: ['/api/v1/signup', '/api/v1/login', '/kurs', '/login','/akademija','/test'],
+      path: ['/api/v1/signup', '/api/v1/login', '/kurs', '/login','/akademija','/test','/welcome'],
     })
 );
 
