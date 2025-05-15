@@ -36,7 +36,7 @@ app.use(
       },
     })
     .unless({
-      path: ['/api/v1/signup', '/api/v1/login', '/kurs', '/login'],
+      path: ['/api/v1/signup', '/api/v1/login', '/kurs', '/login','/akademija','/test'],
     })
 );
 
@@ -52,7 +52,7 @@ app.post('/api/v1/kurs',auth.protect,kursController.createKurs);
 app.patch('/api/v1/kurs/:id', auth.protect,kursController.updateKurs);
 app.delete('/api/v1/kurs/:id',auth.protect,kursController.deleteKurs);
 
-app.get('/allkursevi', viewController.viewKursevi);
+app.get('/welcome', viewController.viewKursevi);
 app.get('/test', viewController.viewTest);
 app.get('/login', viewController.getLoginForm);
 
