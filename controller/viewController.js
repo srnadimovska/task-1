@@ -28,7 +28,7 @@ exports.getLoginForm = async (req, res) => {
   try {
     res.status(200).render('login', {
       title: 'Login',
-      podnaslov: 'Login to see our movies',
+      podnaslov: 'Login to see kursevi',
     });
   } catch (err) {
     res.status(500).send('Error');
