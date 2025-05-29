@@ -1,7 +1,6 @@
 const User = require('../pkg/model/userModel');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const crypto = require('crypto');
 const { promisify } = require('util');
 
 exports.signup = async (req, res) => {
@@ -97,7 +96,7 @@ exports.protect = async (req, res, next) => {
 
     const userTrue = await User.findById(decoded.id);
     if (!userTrue) {
-      return res.status(401).send('User doesnt longer exist!');
+      return res.status(401).send('User does not longer exist!');
     }
 
     req.auth = userTrue;

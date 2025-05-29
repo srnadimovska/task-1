@@ -25,8 +25,7 @@ const userSchema = new mongoose.Schema({
     required: [true, 'Korisnikot mora da ima korisnicka lozinka'],
     
   },
-  passwordResetToken: String,
-  passwordResetExpires: Date,
+  
 });
 
 userSchema.pre('save', async function (next) {
